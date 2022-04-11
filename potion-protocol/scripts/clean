@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Shutting down containers"
+
+docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
+
+yarn unlink:clean:contracts
+yarn unlink:subgraph
+yarn unlink:dapp
+
+echo "Removing data folder"
+
+rm -rf data

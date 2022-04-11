@@ -1,0 +1,19 @@
+# Request (asynchoronous) analysis me by running `mythx analyze` in the directory of the yml file! :)
+# Retrieve results using `mythx analysis`
+
+ci: true
+confirm: true
+analyze:
+  mode: deep
+  async: true
+  create-group: true
+  solc: 0.8.4
+  remappings:
+    - '@openzeppelin=node_modules/@openzeppelin'
+  targets:
+    - contracts/PotionLiquidityPool.sol:PotionLiquidityPool
+    - contracts/CriteriaManager.sol:CriteriaManager
+    - contracts/CurveManager.sol:CurveManager
+    - contracts/packages/PRBMathSD59x18.sol:PRBMathSD59x18
+    - contracts/packages/opynInterface/SignedConverter.sol:SignedConverter
+    - contracts/packages/opynInterface/FixedPointInt256.sol:FixedPointInt256

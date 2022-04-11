@@ -1,0 +1,126 @@
+,asset,strike_pct,duration,util,mood,option_type,train_start_date,train_end_date
+0,Aave,-10.0,1,0.5,Full History,put,2020-10-14,2021-10-31
+1,Aave,-10.0,1,0.5,Full History,call,2020-10-14,2021-10-31
+2,Aave,-10.0,7,0.5,Full History,put,2020-10-14,2021-10-31
+3,Aave,-10.0,7,0.5,Full History,call,2020-10-14,2021-10-31
+4,Aave,-10.0,14,0.5,Full History,put,2020-10-14,2021-10-31
+5,Aave,-10.0,14,0.5,Full History,call,2020-10-14,2021-10-31
+6,Aave,0.0,1,0.5,Full History,put,2020-10-14,2021-10-31
+7,Aave,0.0,1,0.5,Full History,call,2020-10-14,2021-10-31
+8,Aave,0.0,7,0.5,Full History,put,2020-10-14,2021-10-31
+9,Aave,0.0,7,0.5,Full History,call,2020-10-14,2021-10-31
+10,Aave,0.0,14,0.5,Full History,put,2020-10-14,2021-10-31
+11,Aave,0.0,14,0.5,Full History,call,2020-10-14,2021-10-31
+12,Aave,10.0,1,0.5,Full History,put,2020-10-14,2021-10-31
+13,Aave,10.0,1,0.5,Full History,call,2020-10-14,2021-10-31
+14,Aave,10.0,7,0.5,Full History,put,2020-10-14,2021-10-31
+15,Aave,10.0,7,0.5,Full History,call,2020-10-14,2021-10-31
+16,Aave,10.0,14,0.5,Full History,put,2020-10-14,2021-10-31
+17,Aave,10.0,14,0.5,Full History,call,2020-10-14,2021-10-31
+18,Bitcoin,-10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+19,Bitcoin,-10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+20,Bitcoin,-10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+21,Bitcoin,-10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+22,Bitcoin,-10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+23,Bitcoin,-10.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+24,Bitcoin,0.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+25,Bitcoin,0.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+26,Bitcoin,0.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+27,Bitcoin,0.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+28,Bitcoin,0.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+29,Bitcoin,0.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+30,Bitcoin,10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+31,Bitcoin,10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+32,Bitcoin,10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+33,Bitcoin,10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+34,Bitcoin,10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+35,Bitcoin,10.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+36,Ethereum,-10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+37,Ethereum,-10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+38,Ethereum,-10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+39,Ethereum,-10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+40,Ethereum,-10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+41,Ethereum,-10.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+42,Ethereum,0.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+43,Ethereum,0.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+44,Ethereum,0.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+45,Ethereum,0.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+46,Ethereum,0.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+47,Ethereum,0.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+48,Ethereum,10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+49,Ethereum,10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+50,Ethereum,10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+51,Ethereum,10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+52,Ethereum,10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+53,Ethereum,10.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+54,MSFT,-10.0,1,0.5,Full History,put,2017-01-03,2021-10-29
+55,MSFT,-10.0,1,0.5,Full History,call,2017-01-03,2021-10-29
+56,MSFT,-10.0,7,0.5,Full History,put,2017-01-03,2021-10-29
+57,MSFT,-10.0,7,0.5,Full History,call,2017-01-03,2021-10-29
+58,MSFT,-10.0,14,0.5,Full History,put,2017-01-03,2021-10-29
+59,MSFT,-10.0,14,0.5,Full History,call,2017-01-03,2021-10-29
+60,MSFT,0.0,1,0.5,Full History,put,2017-01-03,2021-10-29
+61,MSFT,0.0,1,0.5,Full History,call,2017-01-03,2021-10-29
+62,MSFT,0.0,7,0.5,Full History,put,2017-01-03,2021-10-29
+63,MSFT,0.0,7,0.5,Full History,call,2017-01-03,2021-10-29
+64,MSFT,0.0,14,0.5,Full History,put,2017-01-03,2021-10-29
+65,MSFT,0.0,14,0.5,Full History,call,2017-01-03,2021-10-29
+66,MSFT,10.0,1,0.5,Full History,put,2017-01-03,2021-10-29
+67,MSFT,10.0,1,0.5,Full History,call,2017-01-03,2021-10-29
+68,MSFT,10.0,7,0.5,Full History,put,2017-01-03,2021-10-29
+69,MSFT,10.0,7,0.5,Full History,call,2017-01-03,2021-10-29
+70,MSFT,10.0,14,0.5,Full History,put,2017-01-03,2021-10-29
+71,MSFT,10.0,14,0.5,Full History,call,2017-01-03,2021-10-29
+72,Nikkei 225,-10.0,1,0.5,Full History,put,2017-01-04,2021-10-29
+73,Nikkei 225,-10.0,1,0.5,Full History,call,2017-01-04,2021-10-29
+74,Nikkei 225,-10.0,7,0.5,Full History,put,2017-01-04,2021-10-29
+75,Nikkei 225,-10.0,7,0.5,Full History,call,2017-01-04,2021-10-29
+76,Nikkei 225,-10.0,14,0.5,Full History,put,2017-01-04,2021-10-29
+77,Nikkei 225,-10.0,14,0.5,Full History,call,2017-01-04,2021-10-29
+78,Nikkei 225,0.0,1,0.5,Full History,put,2017-01-04,2021-10-29
+79,Nikkei 225,0.0,1,0.5,Full History,call,2017-01-04,2021-10-29
+80,Nikkei 225,0.0,7,0.5,Full History,put,2017-01-04,2021-10-29
+81,Nikkei 225,0.0,7,0.5,Full History,call,2017-01-04,2021-10-29
+82,Nikkei 225,0.0,14,0.5,Full History,put,2017-01-04,2021-10-29
+83,Nikkei 225,0.0,14,0.5,Full History,call,2017-01-04,2021-10-29
+84,Nikkei 225,10.0,1,0.5,Full History,put,2017-01-04,2021-10-29
+85,Nikkei 225,10.0,1,0.5,Full History,call,2017-01-04,2021-10-29
+86,Nikkei 225,10.0,7,0.5,Full History,put,2017-01-04,2021-10-29
+87,Nikkei 225,10.0,7,0.5,Full History,call,2017-01-04,2021-10-29
+88,Nikkei 225,10.0,14,0.5,Full History,put,2017-01-04,2021-10-29
+89,Nikkei 225,10.0,14,0.5,Full History,call,2017-01-04,2021-10-29
+90,EOS,-10.0,1,0.5,Full History,put,2017-06-29,2021-10-31
+91,EOS,-10.0,1,0.5,Full History,call,2017-06-29,2021-10-31
+92,EOS,-10.0,7,0.5,Full History,put,2017-06-29,2021-10-31
+93,EOS,-10.0,7,0.5,Full History,call,2017-06-29,2021-10-31
+94,EOS,-10.0,14,0.5,Full History,put,2017-06-29,2021-10-31
+95,EOS,-10.0,14,0.5,Full History,call,2017-06-29,2021-10-31
+96,EOS,0.0,1,0.5,Full History,put,2017-06-29,2021-10-31
+98,EOS,0.0,7,0.5,Full History,put,2017-06-29,2021-10-31
+99,EOS,0.0,7,0.5,Full History,call,2017-06-29,2021-10-31
+100,EOS,0.0,14,0.5,Full History,put,2017-06-29,2021-10-31
+101,EOS,0.0,14,0.5,Full History,call,2017-06-29,2021-10-31
+102,EOS,10.0,1,0.5,Full History,put,2017-06-29,2021-10-31
+103,EOS,10.0,1,0.5,Full History,call,2017-06-29,2021-10-31
+104,EOS,10.0,7,0.5,Full History,put,2017-06-29,2021-10-31
+105,EOS,10.0,7,0.5,Full History,call,2017-06-29,2021-10-31
+106,EOS,10.0,14,0.5,Full History,put,2017-06-29,2021-10-31
+107,EOS,10.0,14,0.5,Full History,call,2017-06-29,2021-10-31
+108,Monero,-10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+109,Monero,-10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+110,Monero,-10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+111,Monero,-10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+112,Monero,-10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+113,Monero,-10.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+114,Monero,0.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+115,Monero,0.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+116,Monero,0.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+117,Monero,0.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+118,Monero,0.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+119,Monero,0.0,14,0.5,Full History,call,2017-01-02,2021-10-31
+120,Monero,10.0,1,0.5,Full History,put,2017-01-02,2021-10-31
+121,Monero,10.0,1,0.5,Full History,call,2017-01-02,2021-10-31
+122,Monero,10.0,7,0.5,Full History,put,2017-01-02,2021-10-31
+123,Monero,10.0,7,0.5,Full History,call,2017-01-02,2021-10-31
+124,Monero,10.0,14,0.5,Full History,put,2017-01-02,2021-10-31
+125,Monero,10.0,14,0.5,Full History,call,2017-01-02,2021-10-31

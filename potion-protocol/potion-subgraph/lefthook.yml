@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: false
+  commands:
+    eslint:
+      run: eslint --fix src/* tests/*
+    prettier:
+      run: prettier --write src/* tests/*
+    
+

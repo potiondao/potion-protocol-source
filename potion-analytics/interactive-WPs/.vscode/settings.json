@@ -1,0 +1,17 @@
+{
+    //"python.linting.enabled": true,
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.ipynb_checkpoints": true,
+        "**/*.pyc": true
+    },
+    "files.watcherExclude": {
+        "**/.git**": true,
+        "**/.venv**": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.ipynb_checkpoints": true,
+    },
+    "python.linting.pylintEnabled": true
+}

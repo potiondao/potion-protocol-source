@@ -1,0 +1,221 @@
+,asset,strike_pct,duration,util,mood,train_start_date,train_end_date
+0,Aave,-20.0,1,0.5,Full History,2020-10-14,2021-10-31
+1,Aave,-20.0,7,0.5,Full History,2020-10-14,2021-10-31
+2,Aave,-20.0,14,0.5,Full History,2020-10-14,2021-10-31
+3,Aave,-20.0,30,0.5,Full History,2020-10-14,2021-10-31
+4,Aave,-10.0,1,0.5,Full History,2020-10-14,2021-10-31
+5,Aave,-10.0,7,0.5,Full History,2020-10-14,2021-10-31
+6,Aave,-10.0,14,0.5,Full History,2020-10-14,2021-10-31
+7,Aave,-10.0,30,0.5,Full History,2020-10-14,2021-10-31
+8,Aave,0.0,1,0.5,Full History,2020-10-14,2021-10-31
+9,Aave,0.0,7,0.5,Full History,2020-10-14,2021-10-31
+10,Aave,0.0,14,0.5,Full History,2020-10-14,2021-10-31
+11,Aave,0.0,30,0.5,Full History,2020-10-14,2021-10-31
+12,Aave,10.0,1,0.5,Full History,2020-10-14,2021-10-31
+13,Aave,10.0,7,0.5,Full History,2020-10-14,2021-10-31
+14,Aave,10.0,14,0.5,Full History,2020-10-14,2021-10-31
+15,Aave,10.0,30,0.5,Full History,2020-10-14,2021-10-31
+16,Aave,20.0,1,0.5,Full History,2020-10-14,2021-10-31
+17,Aave,20.0,7,0.5,Full History,2020-10-14,2021-10-31
+18,Aave,20.0,14,0.5,Full History,2020-10-14,2021-10-31
+19,Aave,20.0,30,0.5,Full History,2020-10-14,2021-10-31
+20,Bitcoin,-20.0,1,0.5,Full History,2017-01-02,2021-10-31
+21,Bitcoin,-20.0,7,0.5,Full History,2017-01-02,2021-10-31
+22,Bitcoin,-20.0,14,0.5,Full History,2017-01-02,2021-10-31
+23,Bitcoin,-20.0,30,0.5,Full History,2017-01-02,2021-10-31
+24,Bitcoin,-10.0,1,0.5,Full History,2017-01-02,2021-10-31
+25,Bitcoin,-10.0,7,0.5,Full History,2017-01-02,2021-10-31
+26,Bitcoin,-10.0,14,0.5,Full History,2017-01-02,2021-10-31
+27,Bitcoin,-10.0,30,0.5,Full History,2017-01-02,2021-10-31
+28,Bitcoin,0.0,1,0.5,Full History,2017-01-02,2021-10-31
+29,Bitcoin,0.0,7,0.5,Full History,2017-01-02,2021-10-31
+30,Bitcoin,0.0,14,0.5,Full History,2017-01-02,2021-10-31
+31,Bitcoin,0.0,30,0.5,Full History,2017-01-02,2021-10-31
+32,Bitcoin,10.0,1,0.5,Full History,2017-01-02,2021-10-31
+33,Bitcoin,10.0,7,0.5,Full History,2017-01-02,2021-10-31
+34,Bitcoin,10.0,14,0.5,Full History,2017-01-02,2021-10-31
+35,Bitcoin,10.0,30,0.5,Full History,2017-01-02,2021-10-31
+36,Bitcoin,20.0,1,0.5,Full History,2017-01-02,2021-10-31
+37,Bitcoin,20.0,7,0.5,Full History,2017-01-02,2021-10-31
+38,Bitcoin,20.0,14,0.5,Full History,2017-01-02,2021-10-31
+39,Bitcoin,20.0,30,0.5,Full History,2017-01-02,2021-10-31
+40,Binance Coin,-20.0,1,0.5,Full History,2017-08-14,2021-10-31
+41,Binance Coin,-20.0,7,0.5,Full History,2017-08-14,2021-10-31
+42,Binance Coin,-20.0,14,0.5,Full History,2017-08-14,2021-10-31
+43,Binance Coin,-20.0,30,0.5,Full History,2017-08-14,2021-10-31
+44,Binance Coin,-10.0,1,0.5,Full History,2017-08-14,2021-10-31
+45,Binance Coin,-10.0,7,0.5,Full History,2017-08-14,2021-10-31
+46,Binance Coin,-10.0,14,0.5,Full History,2017-08-14,2021-10-31
+47,Binance Coin,-10.0,30,0.5,Full History,2017-08-14,2021-10-31
+48,Binance Coin,0.0,1,0.5,Full History,2017-08-14,2021-10-31
+49,Binance Coin,0.0,7,0.5,Full History,2017-08-14,2021-10-31
+50,Binance Coin,0.0,14,0.5,Full History,2017-08-14,2021-10-31
+51,Binance Coin,0.0,30,0.5,Full History,2017-08-14,2021-10-31
+52,Binance Coin,10.0,1,0.5,Full History,2017-08-14,2021-10-31
+53,Binance Coin,10.0,7,0.5,Full History,2017-08-14,2021-10-31
+54,Binance Coin,10.0,14,0.5,Full History,2017-08-14,2021-10-31
+55,Binance Coin,10.0,30,0.5,Full History,2017-08-14,2021-10-31
+56,Binance Coin,20.0,1,0.5,Full History,2017-08-14,2021-10-31
+57,Binance Coin,20.0,7,0.5,Full History,2017-08-14,2021-10-31
+58,Binance Coin,20.0,14,0.5,Full History,2017-08-14,2021-10-31
+59,Binance Coin,20.0,30,0.5,Full History,2017-08-14,2021-10-31
+60,Cardano,-20.0,1,0.5,Full History,2017-10-01,2021-10-31
+61,Cardano,-20.0,7,0.5,Full History,2017-10-01,2021-10-31
+62,Cardano,-20.0,14,0.5,Full History,2017-10-01,2021-10-31
+63,Cardano,-20.0,30,0.5,Full History,2017-10-01,2021-10-31
+64,Cardano,-10.0,1,0.5,Full History,2017-10-01,2021-10-31
+65,Cardano,-10.0,7,0.5,Full History,2017-10-01,2021-10-31
+66,Cardano,-10.0,14,0.5,Full History,2017-10-01,2021-10-31
+67,Cardano,-10.0,30,0.5,Full History,2017-10-01,2021-10-31
+68,Cardano,0.0,1,0.5,Full History,2017-10-01,2021-10-31
+69,Cardano,0.0,7,0.5,Full History,2017-10-01,2021-10-31
+70,Cardano,0.0,14,0.5,Full History,2017-10-01,2021-10-31
+71,Cardano,0.0,30,0.5,Full History,2017-10-01,2021-10-31
+72,Cardano,10.0,1,0.5,Full History,2017-10-01,2021-10-31
+73,Cardano,10.0,7,0.5,Full History,2017-10-01,2021-10-31
+74,Cardano,10.0,14,0.5,Full History,2017-10-01,2021-10-31
+75,Cardano,10.0,30,0.5,Full History,2017-10-01,2021-10-31
+76,Cardano,20.0,1,0.5,Full History,2017-10-01,2021-10-31
+77,Cardano,20.0,7,0.5,Full History,2017-10-01,2021-10-31
+78,Cardano,20.0,14,0.5,Full History,2017-10-01,2021-10-31
+79,Cardano,20.0,30,0.5,Full History,2017-10-01,2021-10-31
+80,Chainlink,-20.0,1,0.5,Full History,2017-09-21,2021-10-31
+81,Chainlink,-20.0,7,0.5,Full History,2017-09-21,2021-10-31
+82,Chainlink,-20.0,14,0.5,Full History,2017-09-21,2021-10-31
+83,Chainlink,-20.0,30,0.5,Full History,2017-09-21,2021-10-31
+84,Chainlink,-10.0,1,0.5,Full History,2017-09-21,2021-10-31
+85,Chainlink,-10.0,7,0.5,Full History,2017-09-21,2021-10-31
+86,Chainlink,-10.0,14,0.5,Full History,2017-09-21,2021-10-31
+87,Chainlink,-10.0,30,0.5,Full History,2017-09-21,2021-10-31
+88,Chainlink,0.0,1,0.5,Full History,2017-09-21,2021-10-31
+89,Chainlink,0.0,7,0.5,Full History,2017-09-21,2021-10-31
+90,Chainlink,0.0,14,0.5,Full History,2017-09-21,2021-10-31
+91,Chainlink,0.0,30,0.5,Full History,2017-09-21,2021-10-31
+92,Chainlink,10.0,1,0.5,Full History,2017-09-21,2021-10-31
+93,Chainlink,10.0,7,0.5,Full History,2017-09-21,2021-10-31
+94,Chainlink,10.0,14,0.5,Full History,2017-09-21,2021-10-31
+95,Chainlink,10.0,30,0.5,Full History,2017-09-21,2021-10-31
+96,Chainlink,20.0,1,0.5,Full History,2017-09-21,2021-10-31
+97,Chainlink,20.0,7,0.5,Full History,2017-09-21,2021-10-31
+98,Chainlink,20.0,14,0.5,Full History,2017-09-21,2021-10-31
+99,Chainlink,20.0,30,0.5,Full History,2017-09-21,2021-10-31
+100,Cosmos,-20.0,1,0.5,Full History,2019-04-23,2021-10-31
+101,Cosmos,-20.0,7,0.5,Full History,2019-04-23,2021-10-31
+102,Cosmos,-20.0,14,0.5,Full History,2019-04-23,2021-10-31
+103,Cosmos,-20.0,30,0.5,Full History,2019-04-23,2021-10-31
+104,Cosmos,-10.0,1,0.5,Full History,2019-04-23,2021-10-31
+105,Cosmos,-10.0,7,0.5,Full History,2019-04-23,2021-10-31
+106,Cosmos,-10.0,14,0.5,Full History,2019-04-23,2021-10-31
+107,Cosmos,-10.0,30,0.5,Full History,2019-04-23,2021-10-31
+108,Cosmos,0.0,1,0.5,Full History,2019-04-23,2021-10-31
+109,Cosmos,0.0,7,0.5,Full History,2019-04-23,2021-10-31
+110,Cosmos,0.0,14,0.5,Full History,2019-04-23,2021-10-31
+111,Cosmos,0.0,30,0.5,Full History,2019-04-23,2021-10-31
+112,Cosmos,10.0,1,0.5,Full History,2019-04-23,2021-10-31
+113,Cosmos,10.0,7,0.5,Full History,2019-04-23,2021-10-31
+114,Cosmos,10.0,14,0.5,Full History,2019-04-23,2021-10-31
+115,Cosmos,10.0,30,0.5,Full History,2019-04-23,2021-10-31
+116,Cosmos,20.0,1,0.5,Full History,2019-04-23,2021-10-31
+117,Cosmos,20.0,7,0.5,Full History,2019-04-23,2021-10-31
+118,Cosmos,20.0,14,0.5,Full History,2019-04-23,2021-10-31
+119,Cosmos,20.0,30,0.5,Full History,2019-04-23,2021-10-31
+120,Crypto.com Coin,-20.0,1,0.5,Full History,2019-03-16,2021-10-31
+121,Crypto.com Coin,-20.0,7,0.5,Full History,2019-03-16,2021-10-31
+122,Crypto.com Coin,-20.0,14,0.5,Full History,2019-03-16,2021-10-31
+123,Crypto.com Coin,-20.0,30,0.5,Full History,2019-03-16,2021-10-31
+124,Crypto.com Coin,-10.0,1,0.5,Full History,2019-03-16,2021-10-31
+125,Crypto.com Coin,-10.0,7,0.5,Full History,2019-03-16,2021-10-31
+126,Crypto.com Coin,-10.0,14,0.5,Full History,2019-03-16,2021-10-31
+127,Crypto.com Coin,-10.0,30,0.5,Full History,2019-03-16,2021-10-31
+128,Crypto.com Coin,0.0,1,0.5,Full History,2019-03-16,2021-10-31
+129,Crypto.com Coin,0.0,7,0.5,Full History,2019-03-16,2021-10-31
+130,Crypto.com Coin,0.0,14,0.5,Full History,2019-03-16,2021-10-31
+131,Crypto.com Coin,0.0,30,0.5,Full History,2019-03-16,2021-10-31
+132,Crypto.com Coin,10.0,1,0.5,Full History,2019-03-16,2021-10-31
+133,Crypto.com Coin,10.0,7,0.5,Full History,2019-03-16,2021-10-31
+134,Crypto.com Coin,10.0,14,0.5,Full History,2019-03-16,2021-10-31
+135,Crypto.com Coin,10.0,30,0.5,Full History,2019-03-16,2021-10-31
+136,Crypto.com Coin,20.0,1,0.5,Full History,2019-03-16,2021-10-31
+137,Crypto.com Coin,20.0,7,0.5,Full History,2019-03-16,2021-10-31
+138,Crypto.com Coin,20.0,14,0.5,Full History,2019-03-16,2021-10-31
+139,Crypto.com Coin,20.0,30,0.5,Full History,2019-03-16,2021-10-31
+140,Dogecoin,-20.0,1,0.5,Full History,2017-01-02,2021-10-31
+141,Dogecoin,-20.0,7,0.5,Full History,2017-01-02,2021-10-31
+142,Dogecoin,-20.0,14,0.5,Full History,2017-01-02,2021-10-31
+143,Dogecoin,-20.0,30,0.5,Full History,2017-01-02,2021-10-31
+144,Dogecoin,-10.0,1,0.5,Full History,2017-01-02,2021-10-31
+145,Dogecoin,-10.0,7,0.5,Full History,2017-01-02,2021-10-31
+146,Dogecoin,-10.0,14,0.5,Full History,2017-01-02,2021-10-31
+147,Dogecoin,-10.0,30,0.5,Full History,2017-01-02,2021-10-31
+148,Dogecoin,0.0,1,0.5,Full History,2017-01-02,2021-10-31
+149,Dogecoin,0.0,7,0.5,Full History,2017-01-02,2021-10-31
+150,Dogecoin,0.0,14,0.5,Full History,2017-01-02,2021-10-31
+151,Dogecoin,0.0,30,0.5,Full History,2017-01-02,2021-10-31
+152,Dogecoin,10.0,1,0.5,Full History,2017-01-02,2021-10-31
+153,Dogecoin,10.0,7,0.5,Full History,2017-01-02,2021-10-31
+154,Dogecoin,10.0,14,0.5,Full History,2017-01-02,2021-10-31
+155,Dogecoin,10.0,30,0.5,Full History,2017-01-02,2021-10-31
+156,Dogecoin,20.0,1,0.5,Full History,2017-01-02,2021-10-31
+157,Dogecoin,20.0,7,0.5,Full History,2017-01-02,2021-10-31
+158,Dogecoin,20.0,14,0.5,Full History,2017-01-02,2021-10-31
+159,Dogecoin,20.0,30,0.5,Full History,2017-01-02,2021-10-31
+160,EOS,-20.0,1,0.5,Full History,2017-06-29,2021-10-31
+161,EOS,-20.0,7,0.5,Full History,2017-06-29,2021-10-31
+162,EOS,-20.0,14,0.5,Full History,2017-06-29,2021-10-31
+163,EOS,-20.0,30,0.5,Full History,2017-06-29,2021-10-31
+164,EOS,-10.0,1,0.5,Full History,2017-06-29,2021-10-31
+165,EOS,-10.0,7,0.5,Full History,2017-06-29,2021-10-31
+166,EOS,-10.0,14,0.5,Full History,2017-06-29,2021-10-31
+167,EOS,-10.0,30,0.5,Full History,2017-06-29,2021-10-31
+168,EOS,0.0,1,0.5,Full History,2017-06-29,2021-10-31
+169,EOS,0.0,7,0.5,Full History,2017-06-29,2021-10-31
+170,EOS,0.0,14,0.5,Full History,2017-06-29,2021-10-31
+171,EOS,0.0,30,0.5,Full History,2017-06-29,2021-10-31
+172,EOS,10.0,1,0.5,Full History,2017-06-29,2021-10-31
+173,EOS,10.0,7,0.5,Full History,2017-06-29,2021-10-31
+174,EOS,10.0,14,0.5,Full History,2017-06-29,2021-10-31
+175,EOS,10.0,30,0.5,Full History,2017-06-29,2021-10-31
+176,EOS,20.0,1,0.5,Full History,2017-06-29,2021-10-31
+177,EOS,20.0,7,0.5,Full History,2017-06-29,2021-10-31
+178,EOS,20.0,14,0.5,Full History,2017-06-29,2021-10-31
+179,EOS,20.0,30,0.5,Full History,2017-06-29,2021-10-31
+180,Ethereum,-20.0,1,0.5,Full History,2017-01-02,2021-10-31
+181,Ethereum,-20.0,7,0.5,Full History,2017-01-02,2021-10-31
+182,Ethereum,-20.0,14,0.5,Full History,2017-01-02,2021-10-31
+183,Ethereum,-20.0,30,0.5,Full History,2017-01-02,2021-10-31
+184,Ethereum,-10.0,1,0.5,Full History,2017-01-02,2021-10-31
+185,Ethereum,-10.0,7,0.5,Full History,2017-01-02,2021-10-31
+186,Ethereum,-10.0,14,0.5,Full History,2017-01-02,2021-10-31
+187,Ethereum,-10.0,30,0.5,Full History,2017-01-02,2021-10-31
+188,Ethereum,0.0,1,0.5,Full History,2017-01-02,2021-10-31
+189,Ethereum,0.0,7,0.5,Full History,2017-01-02,2021-10-31
+190,Ethereum,0.0,14,0.5,Full History,2017-01-02,2021-10-31
+191,Ethereum,0.0,30,0.5,Full History,2017-01-02,2021-10-31
+192,Ethereum,10.0,1,0.5,Full History,2017-01-02,2021-10-31
+193,Ethereum,10.0,7,0.5,Full History,2017-01-02,2021-10-31
+194,Ethereum,10.0,14,0.5,Full History,2017-01-02,2021-10-31
+195,Ethereum,10.0,30,0.5,Full History,2017-01-02,2021-10-31
+196,Ethereum,20.0,1,0.5,Full History,2017-01-02,2021-10-31
+197,Ethereum,20.0,7,0.5,Full History,2017-01-02,2021-10-31
+198,Ethereum,20.0,14,0.5,Full History,2017-01-02,2021-10-31
+199,Ethereum,20.0,30,0.5,Full History,2017-01-02,2021-10-31
+200,IOTA,-20.0,1,0.5,Full History,2017-06-13,2021-10-31
+201,IOTA,-20.0,7,0.5,Full History,2017-06-13,2021-10-31
+202,IOTA,-20.0,14,0.5,Full History,2017-06-13,2021-10-31
+203,IOTA,-20.0,30,0.5,Full History,2017-06-13,2021-10-31
+204,IOTA,-10.0,1,0.5,Full History,2017-06-13,2021-10-31
+205,IOTA,-10.0,7,0.5,Full History,2017-06-13,2021-10-31
+206,IOTA,-10.0,14,0.5,Full History,2017-06-13,2021-10-31
+207,IOTA,-10.0,30,0.5,Full History,2017-06-13,2021-10-31
+208,IOTA,0.0,1,0.5,Full History,2017-06-13,2021-10-31
+209,IOTA,0.0,7,0.5,Full History,2017-06-13,2021-10-31
+210,IOTA,0.0,14,0.5,Full History,2017-06-13,2021-10-31
+211,IOTA,0.0,30,0.5,Full History,2017-06-13,2021-10-31
+212,IOTA,10.0,1,0.5,Full History,2017-06-13,2021-10-31
+213,IOTA,10.0,7,0.5,Full History,2017-06-13,2021-10-31
+214,IOTA,10.0,14,0.5,Full History,2017-06-13,2021-10-31
+215,IOTA,10.0,30,0.5,Full History,2017-06-13,2021-10-31
+216,IOTA,20.0,1,0.5,Full History,2017-06-13,2021-10-31
+217,IOTA,20.0,7,0.5,Full History,2017-06-13,2021-10-31
+218,IOTA,20.0,14,0.5,Full History,2017-06-13,2021-10-31
+219,IOTA,20.0,30,0.5,Full History,2017-06-13,2021-10-31

@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+env/*
+.idea/
+.vscode/
+dist/*
+**/.ipynb_checkpoints/*
+**/*.synctex.gz
+**/*.log
+code.code-workspace
+*.pickle
+*.hdf5
+*.zip
+results/

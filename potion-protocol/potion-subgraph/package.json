@@ -1,0 +1,45 @@
+{
+  "name": "potion-subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prepare:ganache": "mustache ../potion-contracts/deploy/ganache.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:kovan": "mustache ../potion-contracts/deploy/kovan.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:kovan.independent": "mustache ../potion-contracts/deploy/kovan.independent.json subgraph.template.yaml > subgraph.yaml",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "build:verbose": "rm -rf errors.txt; yarn build > errors.txt",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ potion-labs/potion-subgraph",
+    "deploy:ganache": "yarn prepare:ganache && yarn build-deploy",
+    "create-local": "graph create --node http://localhost:8020/ potion-labs/potion-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ potion-labs/potion-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 potion-labs/potion-subgraph --version-label 0.0.1",
+    "build-deploy": "yarn && yarn codegen && yarn create-local && yarn deploy-local",
+    "deploy:subgraph:ganache": "./wait-for-it.sh localhost:8545 -- sleep 1 && yarn deploy:ganache",
+    "test": "graph test PotionLiquidityPool CurveManager CriteriaManager OtokenFactoryContract",
+    "test:pools": "graph test PotionLiquidityPool",
+    "test:curves": "graph test CurveManager",
+    "test:criterias": "graph test CriteriaManager",
+    "test:otokens": "graph test OtokenFactoryContract",
+    "lint": "eslint --max-warnings 0 src/* tests/* && prettier --check src/* tests/*",
+    "lint:fix": "eslint --fix src/* tests/* && prettier --write src/* tests/*"
+  },
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.6",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "ethers": "^5.3.1",
+    "mustache": "^4.1.0",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.22.4",
+    "@graphprotocol/graph-ts": "0.22.1",
+    "matchstick-as": "0.2.0"
+  }
+}

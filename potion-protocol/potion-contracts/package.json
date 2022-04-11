@@ -1,0 +1,135 @@
+{
+  "name": "potion-contracts",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Potion Labs",
+  "contributors": [
+    "With special thanks to Opyn",
+    "With thanks to NodeFactoryIo, Compound and OpenZeppelin"
+  ],
+  "engines": {
+    "node": ">=14.16.0"
+  },
+  "files": [
+    "contracts"
+  ],
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "finance",
+    "hardhat",
+    "options",
+    "smart-contracts",
+    "solidity"
+  ],
+  "license": "Apache-2.0",
+  "types": "./typechain/index.d.ts",
+  "scripts": {
+    "prepare": "env-prompt -d .env.sample",
+    "build": "yarn run clean && yarn run compile && yarn run typechain",
+    "solhint": "solhint --max-warnings 0 'contracts/**/*.sol'",
+    "lint": "eslint --max-warnings 0 . && solhint --max-warnings 0 'contracts/**/*.sol' && prettier --check .",
+    "lint:fix": "(eslint --fix . || true) && (solhint --fix 'contracts/**/*.sol' || true) && prettier --write .",
+    "clean": "rm -rf artifacts cache coverage && hardhat clean",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts",
+    "deploy:ganache": "./wait-for-it.sh localhost:8545 -- sleep 1 && hardhat --network ganache run scripts/deploy.ts",
+    "deploy:kovan": "hardhat --network kovan run scripts/deploy.ts",
+    "deploy:kovan.independent": "hardhat --network kovan.independent run scripts/deploy.ts",
+    "deploy:goerli": "hardhat --network goerli run scripts/deploy.ts",
+    "help": "hardhat help",
+    "node": "hardhat node",
+    "script": "hardhat run",
+    "test": "hardhat test",
+    "test:ci": "yarn run test:gas && yarn run test:coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "test:gasreport": "REPORT_GAS_TO_FILE=gasCosts.txt REPORT_GAS=true hardhat test",
+    "test:coverage": "COVERAGE=1 hardhat coverage",
+    "typechain": "hardhat typechain",
+    "generate:docs": "solidity-docgen --solc-module solc-0.8 -e contracts/packages/solcV6OpynContractsForTesting -t ./templates -o reference",
+    "test:poolConfig": "hardhat test test/PotionLiquidityPool.Config.test.ts",
+    "test:curvePricing": "hardhat test test/CurvePricing.test.ts",
+    "test:typeHelpers": "hardhat test test/lib/TypeHelpers.test.ts",
+    "test:curveManager": "hardhat test test/CurveManager.test.ts",
+    "test:purchases": "hardhat test test/PotionLiquidityPool.PurchaseTestGenerator.test.ts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-solhint": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/hardhat-upgrades": "^1.6.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@typechain/ethers-v5": "^6.0.3",
+    "@types/chai": "^4.2.15",
+    "@types/diff": "^5.0.1",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.3.4",
+    "concurrently": "^6.0.0",
+    "diff": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "env-prompt": "^1.2.3",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.9",
+    "ethers": "^5.0.32",
+    "from-exponential": "^1.1.0",
+    "fs-extra": "^9.1.0",
+    "hardhat": "^2.1.1",
+    "hardhat-abi-exporter": "^2.2.0",
+    "hardhat-contract-sizer": "^2.0.3",
+    "hardhat-gas-reporter": "^1.0.0",
+    "hardhat-typechain": "^0.3.5",
+    "husky": "4",
+    "lint-staged": "^10.5.4",
+    "mocha": "^8.3.2",
+    "prettier": "2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.6",
+    "pretty-quick": "^3.1.0",
+    "solc-0.8": "npm:solc@^0.8.0",
+    "solhint": "^3.3.4",
+    "solidity-coverage": "^0.7.16",
+    "solidity-docgen": "^0.5.13",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^9.1.1",
+    "typechain": "^4.0.3",
+    "typescript": "^4.2.3"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*sol",
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(solcover).(ts|js)": [
+      "prettier --write",
+      "eslint --fix --max-warnings 0"
+    ],
+    "*.sol": [
+      "prettier --write",
+      "solhint --max-warnings 0 'contracts/**/*.sol'"
+    ]
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "4.1.0",
+    "gamma-protocol": "https://github.com/opynfinance/GammaProtocol#14b009b0ad4f187b046f1c899123a180b003bb11"
+  }
+}

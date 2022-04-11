@@ -1,0 +1,244 @@
+"""
+Describes a curve evaluated at 0 <= x <= maxUtil:
+  a * x * cosh(b*x^c) + d
+"""
+type Curve @entity {
+  id: ID!
+  a: BigDecimal!
+  b: BigDecimal!
+  c: BigDecimal!
+  d: BigDecimal!
+  maxUtil: BigDecimal!
+  # links the templates that have use the same instance of the curve
+  templates: [Template!] @derivedFrom(field: "curve")
+}
+
+"""
+All Criteria's in the registry of criterias.
+"""
+type Criteria @entity {
+  id: ID!
+  underlyingAsset: Token!
+  strikeAsset: Token!
+  isPut: Boolean!
+  # describes maximum strike percent as a percent (eg xx%)
+  maxStrikePercent: BigDecimal!
+  maxDurationInDays: BigInt!
+  # links this criteria to all criteriaSets that have it as one of the criterias
+  criteriaSets: [CriteriaJoinedCriteriaSet!] @derivedFrom(field: "criteria")
+}
+
+"""
+Describes a unique combination of a Curve and CriteriaSet. For every unique combination
+of curveHash and criteriaSetHash, there is a Template that describes the number of pools
+that have these settings, the aggregated size of all pools, and absolute Profit and Loss.
+"""
+type Template @entity {
+  id: ID!
+  creator: Bytes!
+  # sum of the size of all of the pools that belong to this template
+  size: BigDecimal!
+  locked: BigDecimal!
+  utilization: BigDecimal!
+  # number of pools that belong to this template
+  numPools: BigInt!
+  curve: Curve
+  criteriaSet: CriteriaSet
+  # TODO: This field is present only for backward reasons, can be removed after we have updated the frontend
+  pnl: BigDecimal!
+  # total Profit and Loss over the lifetime of the template
+  pnlTotal: BigDecimal!
+  # the percentage returned on the template over its lifetime
+  pnlPercentage: BigDecimal!
+  # the cumulative liquidity at the pool associated with a template at the time of each trade
+  liquidityAtTrades: BigDecimal!
+  pools: [Pool!] @derivedFrom(field: "template")
+}
+
+# describes a criteria set
+type CriteriaSet @entity {
+  id: ID! # hash of the CriteriaSet
+  criterias: [CriteriaJoinedCriteriaSet!]! @derivedFrom(field: "criteriaSet")
+  templates: [Template!] @derivedFrom(field: "criteriaSet")
+}
+
+"""
+Each CriteriaJoinedCriteriaSet entity describes one Criteria that belongs
+to a CriteriaSet. This entity allows for searches from Criterias to CriteriaSets
+to be completed.
+"""
+type CriteriaJoinedCriteriaSet @entity {
+  id: ID!
+  criteriaSet: CriteriaSet!
+  criteria: Criteria!
+}
+
+"""
+Describes a LP's pool.
+"""
+type Pool @entity {
+  id: ID! # Unique id, contract address
+  poolId: BigInt!
+  lp: Bytes!
+  size: BigDecimal!
+  locked: BigDecimal!
+  unlocked: BigDecimal!
+  utilization: BigDecimal!
+  # average cost
+  averageCost: BigDecimal
+  # corresponding template to pool's CriteriaSet and CurveHash selection
+  template: Template
+  # total Profit and Loss over the lifetime of the pool
+  pnlTotal: BigDecimal!
+  # the percentage returned on the pool over its lifetime
+  pnlPercentage: BigDecimal!
+  # the cumulative liquidity at the pool at the time of each trade
+  liquidityAtTrades: BigDecimal!
+  initialBalance: BigDecimal
+  snapshots: [PoolSnapshot!] @derivedFrom(field: "currentPool")
+  poolRecords: [PoolRecord!] @derivedFrom(field: "pool")
+}
+
+"""
+This entity is produced anytime a field in a pool is updated.
+The type of change is denoted by actionType, which comes from the
+ActionType enum.
+"""
+type PoolSnapshot @entity {
+  id: ID! # Unique id, contract address
+  poolId: BigInt!
+  lp: Bytes
+  size: BigDecimal!
+  locked: BigDecimal!
+  unlocked: BigDecimal!
+  utilization: BigDecimal!
+  template: Template!
+  templatePnlPercentage: BigDecimal
+  templateSize: BigDecimal
+  templateUtilization: BigDecimal
+  templatePnlTotal: BigDecimal
+  templateLiquidityAtTrades: BigDecimal
+  actionAmount: BigDecimal!
+  actionType: BigInt!
+  timestamp: BigInt!
+  currentPool: Pool!
+  pnlTotal: BigDecimal!
+  pnlPercentage: BigDecimal!
+  liquidityAtTrades: BigDecimal!
+  initialBalance: BigDecimal
+}
+
+"""
+This entity exists for unique combination of buyer's wallet address
+and oToken. It tracks the amount of oTokens purchased (for this specific oToken)
+and the amount of premium paid to the LPs.
+"""
+type BuyerRecord @entity {
+  id: ID! # transaction hash
+  buyer: Bytes!
+  expiry: BigInt!
+  otoken: OToken!
+  premium: BigDecimal!
+  numberOfOTokens: BigDecimal!
+}
+
+"""
+This entity exists for every unique combination of LP and oToken address.
+Note that this is aggregated at the LP level and not at the pool level.
+This is done to make reclaiming done easier.
+
+It tracks the number of oTokens underwritten, the total liquidityCollateralized,
+and the total premiumReceived for all oTokens.
+
+It also contains the field poolRecords, for every pool by the same LP that has backed
+the same oToken, there exists an entry that describes the collateral of each pool.
+"""
+type LPRecord @entity {
+  id: ID!
+  lp: Bytes!
+  otoken: OToken!
+  numberOfOTokens: BigDecimal!
+  liquidityCollateralized: BigDecimal!
+  premiumReceived: BigDecimal!
+  poolRecords: [PoolRecord!] @derivedFrom(field: "lpRecord")
+}
+
+"""
+For every pool that has contributed to a oToken, there exists a PoolRecord
+entity. It tracks the lp it belongs to, the oToken, the amount of money collateralized,
+and the amount returned to the pool after settlement.
+
+The lpRecord field is used to join with LPRecord.
+"""
+type PoolRecord @entity {
+  id: ID!
+  pool: Pool!
+  lpRecord: LPRecord!
+  otoken: OToken!
+  collateral: BigDecimal!
+  premiumReceived: BigDecimal!
+  numberOfOTokens: BigDecimal!
+  returned: BigDecimal
+}
+
+"""
+Tracks the oTokens created via the OtokenFactoryContract. This tracks all information
+related to the oToken.
+"""
+type OToken @entity {
+  id: ID!
+  tokenAddress: Bytes!
+  creator: Bytes!
+  underlyingAsset: Token!
+  strikeAsset: Token!
+  collateralAsset: Token!
+  strikePrice: BigDecimal!
+  expiry: BigInt! # expiry in epoch
+  isPut: Boolean!
+  decimals: BigInt!
+  settled: Boolean!
+  premium: BigDecimal!
+  collateralized: BigDecimal!
+  liquiditySettled: BigDecimal!
+  numberOfOTokens: BigDecimal!
+  purchasesCount: BigInt!
+  lpRecords: [LPRecord!] @derivedFrom(field: "otoken")
+  buyerRecords: [BuyerRecord!] @derivedFrom(field: "otoken")
+  orderBook: [OrderBookEntry!] @derivedFrom(field: "otoken")
+}
+
+type OrderBookEntry @entity {
+  id: ID!
+  otoken: OToken!
+  timestamp: BigInt!
+  buyer: Bytes!
+  numberOfOTokens: BigDecimal!
+  premium: BigDecimal!
+}
+
+type Token @entity {
+  id: ID!
+  address: Bytes!
+  decimals: BigInt!
+  symbol: String!
+  name: String!
+}
+
+type Underlying @entity {
+  id: ID!
+  token: Token!
+}
+
+type Collateral @entity {
+  id: ID!
+  token: Token!
+}
+
+type Product @entity {
+  id: ID!
+  underlying: Token!
+  strike: Token!
+  collateral: Token!
+  isPut: Boolean!
+  isWhitelisted: Boolean!
+}

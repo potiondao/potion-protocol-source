@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "potion-contracts",
+            "potion-dapp"
+        ]
+    },
+    "scripts": {
+        "deploy:ganache": "yarn workspace potion-contracts deploy:ganache",
+        "deploy:subgraph:ganache": "cd potion-subgraph && yarn deploy:subgraph:ganache",
+        "postinstall": "cd potion-subgraph && yarn",
+        "prepare": "env-prompt -d .env.sample",
+        "prepare:contracts": "yarn workspace potion-contracts prepare",
+        "serve": "yarn workspace potion-dapp serve",
+        "serve:ganache": "yarn workspace potion-dapp serve:ganache",
+        "serve:kovan": "yarn workspace potion-dapp serve:kovan",
+        "link:create:contracts": "yarn workspace potion-contracts link",
+        "link:subgraph": "cd potion-subgraph && yarn link potion-contracts",
+        "link:dapp": "yarn workspace potion-dapp link potion-contracts",
+        "unlink:clean:contracts": "yarn workspace potion-contracts unlink",
+        "unlink:subgraph": "cd potion-subgraph && yarn unlink potion-contracts",
+        "unlink:dapp": "yarn workspace potion-dapp unlink potion-contracts"
+    },
+    "devDependencies": {
+        "env-prompt": "^1.2.3"
+    }
+}

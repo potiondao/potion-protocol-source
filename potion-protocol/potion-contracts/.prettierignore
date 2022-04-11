@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+artifacts
+coverage
+artifacts
+cache
+typechain
+coverage.json
+deployments
+deploy/*.json
+templates/*
+reference/*
+# Ignore imported contracts
+contracts/packages
+package.json
+.solhint.json

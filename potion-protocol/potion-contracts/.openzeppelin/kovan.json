@@ -1,0 +1,747 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x574B4402663fF736fEF8F4513e50a2436Bcc316c",
+    "txHash": "0xe4e93ae384e15e4d02db765754527200aff818af037d535722a8b632e0c684e1"
+  },
+  "proxies": [
+    {
+      "address": "0x29f9e38A72e9D1B034EB67f3Ee0471a37f3430fF",
+      "txHash": "0x79de3d82287ba8ef03f190e8b5cc1254e86ab3fe9550447898093a4a22a485e5",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x543F4845A804807bC259bA6847027a042cF4c818",
+      "txHash": "0x869a5d190b43c439d580bd2aee1b30f3fdc1bf7e8b7e1907a133028f3828ee35",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x867996D7aCe5112ba36cd6B1Ec6C45Fd817D8d64",
+      "txHash": "0x35d3875d3cf11eafb6b3d2de52cf7c845235511ff3109b48d7396ba76d4b45f7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1130A0cfC1883f933De83926b3DBC6d63006C5d4",
+      "txHash": "0x4ce6531897dd745f6bf301294fb51d41aa3a96f0908072cbbe8c2d3b9e312cb9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3d82e8d72D900AC71a46c66168F75652833a2b22",
+      "txHash": "0xaba1fbf9ebb2c8c36f133569b162d6e8253358e0a71d74ce1e64f8d14af40d35",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xfaFe702Dd55217350E8CA97f2F69Dfac632D95E2",
+      "txHash": "0x8c2bdb16d78d6664ce25120714b6afac0b21654460e699845e5e433bcfa99601",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xa9f49b2d7Dec0B36C5C0AA0f37632756d72a2483",
+      "txHash": "0xd1f7c696db32420456d36837a561c46cb38a68203707188091f9b028e2395e24",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x902AD79D19Baadf4E283FE8140C726D513b513Fa",
+      "txHash": "0x9695c124ddd5f50474749c3dae8bc2c4d9f2943f9cf605d4552a0733228475ce",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xED5877B0b01D8c62bd741199a8A5034237db1525",
+      "txHash": "0x6b01cce6014021f247a9d84dca76578980bbf3cde262f9e99194412537c60321",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xd10D786898Cdd81626cA21561Dc5A226ddBEA48e",
+      "txHash": "0x7054938ff85c99a676a4101987fbbc141e444573bcee3db5ea59dd2ff7abec6f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6c2d4fAe8d7DB2bAe9802dBd637A09844dc283f9",
+      "txHash": "0x5c23c5f961d28081a7505cdbdc3a3473282959f92ef5921fe422ec25b23f9b18",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "34a761e55c4bf1a9d8c8a4cbf1b656f1a618458cb2496d22392df788dc204f72": {
+      "address": "0x79B6e5Bf8C3dB14Ef599224b205C4f74d08118A2",
+      "txHash": "0x731c1632a21fb0d6935e6f557e7030892295da8a97c7c980ef7527adb539fda3",
+      "layout": {
+        "storage": [
+          {
+            "contract": "CurveManager",
+            "label": "curvesByHash",
+            "type": "t_mapping(t_bytes32,t_struct(CurveEntry)1919_storage)",
+            "src": "contracts/CurveManager.sol:39"
+          },
+          {
+            "contract": "CriteriaManager",
+            "label": "criteriaByHash",
+            "type": "t_mapping(t_bytes32,t_struct(CurveCriteria)1523_storage)",
+            "src": "contracts/CriteriaManager.sol:34"
+          },
+          {
+            "contract": "CriteriaManager",
+            "label": "criteriaSetById",
+            "type": "t_mapping(t_bytes32,t_struct(CriteriaSet)1530_storage)",
+            "src": "contracts/CriteriaManager.sol:35"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "contracts/packages/opyn/packages/oz/upgradeability/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "contracts/packages/opyn/packages/oz/upgradeability/Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "contracts/packages/opyn/packages/oz/upgradeability/Initializable.sol:63"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "ZERO",
+            "type": "t_struct(FixedPointInt)16352_storage",
+            "src": "contracts/PotionLiquidityPool.sol:34"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaultCount",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:130"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaults",
+            "type": "t_mapping(t_address,t_struct(VaultInfo)3192_storage)",
+            "src": "contracts/PotionLiquidityPool.sol:131"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "lpPools",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)3206_storage))",
+            "src": "contracts/PotionLiquidityPool.sol:132"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "sumOfAllLpBalances",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:133"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "opynAddressBook",
+            "type": "t_contract(AddressBookInterface)15074",
+            "src": "contracts/PotionLiquidityPool.sol:135"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "poolCollateralToken",
+            "type": "t_contract(ERC20Interface)15413",
+            "src": "contracts/PotionLiquidityPool.sol:136"
+          }
+        ],
+        "types": {
+          "t_struct(FixedPointInt)16352_storage": {
+            "label": "struct FixedPointInt256.FixedPointInt",
+            "members": [
+              {
+                "label": "value",
+                "type": "t_int256"
+              }
+            ]
+          },
+          "t_int256": {
+            "label": "int256"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_struct(VaultInfo)3192_storage)": {
+            "label": "mapping(address => struct PotionLiquidityPool.VaultInfo)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_struct(VaultInfo)3192_storage": {
+            "label": "struct PotionLiquidityPool.VaultInfo",
+            "members": [
+              {
+                "label": "vaultId",
+                "type": "t_uint256"
+              },
+              {
+                "label": "totalContributions",
+                "type": "t_uint256"
+              },
+              {
+                "label": "settled",
+                "type": "t_bool"
+              },
+              {
+                "label": "settledAmount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "contributionsByLp",
+                "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)3206_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital))"
+          },
+          "t_mapping(t_uint256,t_struct(PoolOfCapital)3206_storage)": {
+            "label": "mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital)"
+          },
+          "t_struct(PoolOfCapital)3206_storage": {
+            "label": "struct PotionLiquidityPool.PoolOfCapital",
+            "members": [
+              {
+                "label": "total",
+                "type": "t_uint256"
+              },
+              {
+                "label": "locked",
+                "type": "t_uint256"
+              },
+              {
+                "label": "curveHash",
+                "type": "t_bytes32"
+              },
+              {
+                "label": "criteriaSetHash",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_contract(AddressBookInterface)15074": {
+            "label": "contract AddressBookInterface"
+          },
+          "t_contract(ERC20Interface)15413": {
+            "label": "contract ERC20Interface"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_mapping(t_bytes32,t_struct(CurveCriteria)1523_storage)": {
+            "label": "mapping(bytes32 => struct CriteriaManager.CurveCriteria)"
+          },
+          "t_struct(CurveCriteria)1523_storage": {
+            "label": "struct CriteriaManager.CurveCriteria",
+            "members": [
+              {
+                "label": "underlyingAsset",
+                "type": "t_address"
+              },
+              {
+                "label": "strikeAsset",
+                "type": "t_address"
+              },
+              {
+                "label": "isPut",
+                "type": "t_bool"
+              },
+              {
+                "label": "maxStrikePercent",
+                "type": "t_uint256"
+              },
+              {
+                "label": "maxDurationInDays",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_mapping(t_bytes32,t_struct(CriteriaSet)1530_storage)": {
+            "label": "mapping(bytes32 => struct CriteriaManager.CriteriaSet)"
+          },
+          "t_struct(CriteriaSet)1530_storage": {
+            "label": "struct CriteriaManager.CriteriaSet",
+            "members": [
+              {
+                "label": "exists",
+                "type": "t_bool"
+              },
+              {
+                "label": "hashes",
+                "type": "t_mapping(t_bytes32,t_bool)"
+              }
+            ]
+          },
+          "t_mapping(t_bytes32,t_bool)": {
+            "label": "mapping(bytes32 => bool)"
+          },
+          "t_mapping(t_bytes32,t_struct(CurveEntry)1919_storage)": {
+            "label": "mapping(bytes32 => struct CurveManager.CurveEntry)"
+          },
+          "t_struct(CurveEntry)1919_storage": {
+            "label": "struct CurveManager.CurveEntry",
+            "members": [
+              {
+                "label": "params",
+                "type": "t_struct(Curve)1914_storage"
+              },
+              {
+                "label": "exists",
+                "type": "t_bool"
+              }
+            ]
+          },
+          "t_struct(Curve)1914_storage": {
+            "label": "struct CurveManager.Curve",
+            "members": [
+              {
+                "label": "a_64x64",
+                "type": "t_int128"
+              },
+              {
+                "label": "b_64x64",
+                "type": "t_int128"
+              },
+              {
+                "label": "c_64x64",
+                "type": "t_int128"
+              },
+              {
+                "label": "d_64x64",
+                "type": "t_int128"
+              }
+            ]
+          },
+          "t_int128": {
+            "label": "int128"
+          }
+        }
+      }
+    },
+    "6f6cedf830260af4520ea9eaedeb541dd9b4af7ea9c9be7df6ecc0a5d7e2ad1c": {
+      "address": "0x1F21E2AEEf07BF2A9a7Af7BDed43dCE3E5bEc976",
+      "txHash": "0xeedb67984a85c9004fd5fa7f6b8462c23383d5937001187f3d1177c04739eebe",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:25"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:30"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaultCount",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:187"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaults",
+            "type": "t_mapping(t_address,t_struct(VaultInfo)2435_storage)",
+            "src": "contracts/PotionLiquidityPool.sol:190"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "lpPools",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)2449_storage))",
+            "src": "contracts/PotionLiquidityPool.sol:193"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "sumOfAllUnlockedBalances",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:196"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "opynController",
+            "type": "t_contract(ControllerInterface)8534",
+            "src": "contracts/PotionLiquidityPool.sol:200"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "opynAddressBook",
+            "type": "t_contract(AddressBookInterface)7789",
+            "src": "contracts/PotionLiquidityPool.sol:202"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "crv",
+            "type": "t_contract(ICurveManager)5052",
+            "src": "contracts/PotionLiquidityPool.sol:205"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "crit",
+            "type": "t_contract(ICriteriaManager)4984",
+            "src": "contracts/PotionLiquidityPool.sol:208"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "poolCollateralToken",
+            "type": "t_contract(IERC20Upgradeable)368",
+            "src": "contracts/PotionLiquidityPool.sol:211"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_struct(VaultInfo)2435_storage)": {
+            "label": "mapping(address => struct PotionLiquidityPool.VaultInfo)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_struct(VaultInfo)2435_storage": {
+            "label": "struct PotionLiquidityPool.VaultInfo",
+            "members": [
+              {
+                "label": "vaultId",
+                "type": "t_uint256"
+              },
+              {
+                "label": "totalContributions",
+                "type": "t_uint256"
+              },
+              {
+                "label": "settled",
+                "type": "t_bool"
+              },
+              {
+                "label": "settledAmount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "contributionsByLp",
+                "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)2449_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital))"
+          },
+          "t_mapping(t_uint256,t_struct(PoolOfCapital)2449_storage)": {
+            "label": "mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital)"
+          },
+          "t_struct(PoolOfCapital)2449_storage": {
+            "label": "struct PotionLiquidityPool.PoolOfCapital",
+            "members": [
+              {
+                "label": "total",
+                "type": "t_uint256"
+              },
+              {
+                "label": "locked",
+                "type": "t_uint256"
+              },
+              {
+                "label": "curveHash",
+                "type": "t_bytes32"
+              },
+              {
+                "label": "criteriaSetHash",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_contract(ControllerInterface)8534": {
+            "label": "contract ControllerInterface"
+          },
+          "t_contract(AddressBookInterface)7789": {
+            "label": "contract AddressBookInterface"
+          },
+          "t_contract(ICurveManager)5052": {
+            "label": "contract ICurveManager"
+          },
+          "t_contract(ICriteriaManager)4984": {
+            "label": "contract ICriteriaManager"
+          },
+          "t_contract(IERC20Upgradeable)368": {
+            "label": "contract IERC20Upgradeable"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "a9b66ad2f35db1507f452826b663ba393e91a8f1bee1c98846e55edf05bc637d": {
+      "address": "0xCdA7FACfaA630B27CB9250795a8D5fBD086D8181",
+      "txHash": "0xc46627f38a067bacb36089127044eac93bc9ebd884c8bc95cde059b4b26d0e50",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:23"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:28"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "maxTotalValueLocked",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:195"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaultCount",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:198"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "vaults",
+            "type": "t_mapping(t_address,t_struct(VaultInfo)2450_storage)",
+            "src": "contracts/PotionLiquidityPool.sol:201"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "lpPools",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)2464_storage))",
+            "src": "contracts/PotionLiquidityPool.sol:204"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "sumOfAllUnlockedBalances",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:207"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "sumOfAllLockedBalances",
+            "type": "t_uint256",
+            "src": "contracts/PotionLiquidityPool.sol:210"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "opynController",
+            "type": "t_contract(ControllerInterface)8838",
+            "src": "contracts/PotionLiquidityPool.sol:214"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "opynAddressBook",
+            "type": "t_contract(AddressBookInterface)8090",
+            "src": "contracts/PotionLiquidityPool.sol:216"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "crv",
+            "type": "t_contract(ICurveManager)5177",
+            "src": "contracts/PotionLiquidityPool.sol:219"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "crit",
+            "type": "t_contract(ICriteriaManager)5109",
+            "src": "contracts/PotionLiquidityPool.sol:222"
+          },
+          {
+            "contract": "PotionLiquidityPool",
+            "label": "poolCollateralToken",
+            "type": "t_contract(IERC20Upgradeable)367",
+            "src": "contracts/PotionLiquidityPool.sol:225"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_struct(VaultInfo)2450_storage)": {
+            "label": "mapping(address => struct PotionLiquidityPool.VaultInfo)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_struct(VaultInfo)2450_storage": {
+            "label": "struct PotionLiquidityPool.VaultInfo",
+            "members": [
+              {
+                "label": "vaultId",
+                "type": "t_uint256"
+              },
+              {
+                "label": "totalContributions",
+                "type": "t_uint256"
+              },
+              {
+                "label": "settled",
+                "type": "t_bool"
+              },
+              {
+                "label": "settledAmount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "contributionsByLp",
+                "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(address => mapping(uint256 => uint256))"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(PoolOfCapital)2464_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital))"
+          },
+          "t_mapping(t_uint256,t_struct(PoolOfCapital)2464_storage)": {
+            "label": "mapping(uint256 => struct PotionLiquidityPool.PoolOfCapital)"
+          },
+          "t_struct(PoolOfCapital)2464_storage": {
+            "label": "struct PotionLiquidityPool.PoolOfCapital",
+            "members": [
+              {
+                "label": "total",
+                "type": "t_uint256"
+              },
+              {
+                "label": "locked",
+                "type": "t_uint256"
+              },
+              {
+                "label": "curveHash",
+                "type": "t_bytes32"
+              },
+              {
+                "label": "criteriaSetHash",
+                "type": "t_bytes32"
+              }
+            ]
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          },
+          "t_contract(ControllerInterface)8838": {
+            "label": "contract ControllerInterface"
+          },
+          "t_contract(AddressBookInterface)8090": {
+            "label": "contract AddressBookInterface"
+          },
+          "t_contract(ICurveManager)5177": {
+            "label": "contract ICurveManager"
+          },
+          "t_contract(ICriteriaManager)5109": {
+            "label": "contract ICriteriaManager"
+          },
+          "t_contract(IERC20Upgradeable)367": {
+            "label": "contract IERC20Upgradeable"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    }
+  }
+}

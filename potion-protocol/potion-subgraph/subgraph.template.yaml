@@ -1,0 +1,133 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: PotionLiquidityPool
+    network: {{theGraphNetworkName}}
+    source:
+      address: "{{potionLiquidityPoolAddress}}"
+      abi: PotionLiquidityPool
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - BuyerRecord
+        - LPRecord
+        - PoolSnapshot
+        - Template
+        - PoolRecord
+        - OrderBookEntry
+      abis:
+        - name: PotionLiquidityPool
+          file: node_modules/potion-contracts/abis/PotionLiquidityPool.json
+      eventHandlers:
+        # Liquidity Pool Events
+        - event: Deposited(indexed address,indexed uint256,uint256)
+          handler: handleDeposited
+        - event: Withdrawn(indexed address,indexed uint256,uint256)
+          handler: handleWithdrawn
+        - event: CriteriaSetSelected(indexed address,indexed uint256,bytes32)
+          handler: handleCriteriaSetSelected
+        - event: CurveSelected(indexed address,indexed uint256,bytes32)
+          handler: handleCurveSelected
+        # Buying / Selling Options
+        - event: OptionsBought(indexed address,indexed address,uint256,uint256)
+          handler: handleOptionsBought
+        - event: OptionsSold(indexed address,indexed uint256,indexed address,bytes32,uint256,uint256,uint256)
+          handler: handleOptionsSold
+        - event: OptionSettled(indexed address,uint256)
+          handler: handleOptionsSettled
+        - event: OptionSettlementDistributed(indexed address,indexed address,indexed uint256,uint256)
+          handler: handleOptionSettlementDistributed
+      file: ./src/pools.ts
+  - kind: ethereum/contract
+    name: CurveManager
+    network: {{theGraphNetworkName}}
+    source:
+      address: "{{curveManagerAddress}}"
+      abi: CurveManager
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Curve
+      abis:
+        - name: CurveManager
+          file: node_modules/potion-contracts/abis/ICurveManager.json
+      eventHandlers:
+        - event: CurveAdded(indexed bytes32,(int256,int256,int256,int256,int256))
+          handler: handleCurveAdded
+      file: ./src/curves.ts
+  - kind: ethereum/contract
+    name: CriteriaManager
+    network: {{theGraphNetworkName}}
+    source:
+      address: "{{criteriaManagerAddress}}"
+      abi: CriteriaManager
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Criteria
+        - CriteriaSet
+        - CriteriaJoinedCriteriaSet
+      abis:
+        - name: CriteriaManager
+          file: node_modules/potion-contracts/abis/ICriteriaManager.json
+      eventHandlers:
+        - event: CriteriaAdded(indexed bytes32,(address,address,bool,uint256,uint256))
+          handler: handleCriteriaAdded
+        - event: CriteriaSetAdded(indexed bytes32,bytes32[])
+          handler: handleCriteriaSetAdded
+      file: ./src/criterias.ts
+  - kind: ethereum/contract
+    name: OtokenFactoryContract
+    network: {{theGraphNetworkName}}
+    source:
+      address: "{{otokenFactoryAddress}}"
+      abi: OtokenFactoryContract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - OToken
+      abis:
+        - name: OtokenFactoryContract
+          file: node_modules/potion-contracts/abis/OtokenFactory.json
+        - name: Otoken
+          file: node_modules/potion-contracts/abis/Otoken.json
+      eventHandlers:
+        - event: OtokenCreated(address,address,indexed address,indexed address,indexed address,uint256,uint256,bool)
+          handler: handleOtokenCreate
+      file: ./src/otoken.ts
+  - kind: ethereum/contract
+    name: Whitelist
+    network: {{theGraphNetworkName}}
+    source:
+      address: "{{whitelistAddress}}"
+      abi: Whitelist
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Underlying
+        - Collateral
+      abis:
+        - name: Whitelist
+          file: node_modules/potion-contracts/abis/Whitelist.json
+        - name: IERC20MetadataUpgradeable
+          file: node_modules/potion-contracts/abis/IERC20MetadataUpgradeable.json
+      eventHandlers:
+        - event: CollateralWhitelisted(indexed address)
+          handler: handleCollateralWhitelist
+        - event: ProductWhitelisted(bytes32,indexed address,indexed address,indexed address,bool)
+          handler: handleProductWhitelist
+      file: ./src/token.ts

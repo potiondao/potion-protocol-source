@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Initializing project" &&
+yarn link:create:contracts &&
+yarn link:subgraph &&
+yarn link:dapp &&
+yarn
+
+yarn workspace potion-dapp prepare:hooks
+yarn workspace potion-dapp prepare:env

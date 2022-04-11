@@ -1,0 +1,30 @@
+name: ci
+# This workflow is triggered when main is updated or PRs are opened against main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.16.0'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn install --frozen-lockfile --non-interactive
+      - name: Build
+        run: yarn run build
+      - name: Run linter
+        run: yarn run lint
+      - name: Run tests
+        run: yarn run test:ci

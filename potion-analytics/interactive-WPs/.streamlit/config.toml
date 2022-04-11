@@ -1,0 +1,11 @@
+[theme]
+
+# The preset Streamlit theme that your custom theme inherits from. One of "light" or "dark".
+base = "dark"
+
+# Font family for all text in the app, except code blocks. One of "sans serif", "serif", or "monospace".
+# The value below was set in /Users/tylerjrichards/.streamlit/config.toml
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

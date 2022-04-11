@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Starting containers" &&
+yarn prepare &&
+docker-compose up -d &&
+echo "Containers up & running" &&
+echo "About to deploy to ganache" &&
+yarn prepare:contracts &&
+yarn deploy:ganache &&
+echo "Deployed to ganache successfully" &&
+yarn deploy:subgraph:ganache

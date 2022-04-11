@@ -1,0 +1,14 @@
+{
+  "collateralTokenAddress": "0x889805Cc6488818Bb8fc2A7bF66B842061A72960",
+  "opynAddressBookAddress": "0x1BD00a30827768b9B6fC5E4A42F424cF57d5FE99",
+  "potionLiquidityPoolAddress": "0x6c2d4fAe8d7DB2bAe9802dBd637A09844dc283f9",
+  "curveManagerAddress": "0xfE5858dfDa11ea758AFd576DCF844A49d51E4e9f",
+  "criteriaManagerAddress": "0xb0aA715aa80aeCe6a1e9EBB7628dc0a0E23559e6",
+  "marginVaultLibAddress": "0xf74C4411caff2E65435Ab494e454f49A71B4A1D6",
+  "otokenFactoryAddress": "0x415789d11409533410699Cf464E6bC540E85b9D9",
+  "whitelistAddress": "0xAcbc7baF72b1a5E97b1e3111D5b60aE6fF19cA01",
+  "network": "kovan.independent",
+  "theGraphNetworkName": "kovan",
+  "sampleUnderlyingTokenAddress": "0x3bDC381232F72bC3c4844666c91741551268252a",
+  "oracleIsMock": true
+}

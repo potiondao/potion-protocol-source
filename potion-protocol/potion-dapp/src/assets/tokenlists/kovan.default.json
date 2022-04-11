@@ -1,0 +1,35 @@
+{
+  "name": "Default List",
+  "timestamp": "2021-09-23T15:18:10.425Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 42,
+      "address": "0x7e6eda50d1c833be936492bf42c1bf376239e9e2",
+      "name": "OpynUSDC",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+    },
+    {
+      "chainId": 42,
+      "address": "0x50570256f0da172a1908207aaf0c80d4b279f303",
+      "name": "OpynBTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "logoURI": "https://tokens.1inch.io/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.png"
+    },
+    {
+      "chainId": 42,
+      "address": "0xd0a1e359811322d97991e03f863a0c30c2cf029c",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png"
+    }
+  ]
+}
