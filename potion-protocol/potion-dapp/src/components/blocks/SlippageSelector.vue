@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 py-3 rounded-3xl">
-    <div class="mb-3 text-base">Slippage Tollerance</div>
+    <div class="mb-3 text-base">Slippage Tolerance</div>
     <div class="flex gap-2">
       <button
         v-for="option in options"
