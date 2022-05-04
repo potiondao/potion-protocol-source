@@ -2,10 +2,12 @@
 This module provides the main GUI frontend code for the historical data downloader tool
 """
 from PIL import Image
+import streamlit as st
+import subprocess
 import os
 import sys
 
-import streamlit as st
+import argparse
 
 # Add the root to the path so we can import our potion files
 module_path = os.path.abspath(os.path.join('.'))
@@ -26,6 +28,42 @@ st.set_page_config(
     page_icon=im,
     initial_sidebar_state="collapsed",
 )
+
+
+def initialize_session_state():
+    """
+    Initializes the streamlit session state object to use dynamic UI elements
+
+    Returns
+    -------
+    None
+    """
+    if 'docs_engine' not in st.session_state:
+        st.session_state.docs_engine = None
+
+    if 'files_engine' not in st.session_state:
+        st.session_state.files_engine = None
+
+
+def start_pdocs(multi=False):
+    """
+    When started in single tab mode, the documentation and file servers
+    need to be started so that the user guides work.
+
+    Parameters
+    ----------
+    multi : bool
+        Flag indicating if running in multi tab mode
+
+    Returns
+    -------
+    None
+    """
+    if not multi:
+
+        st.session_state.files_engine = subprocess.Popen(['python', '-m', 'http.server'])
+        st.session_state.docs_engine = subprocess.Popen([
+            'pdoc', '--html', 'potion', '--force', '--http', ':'])
 
 
 def load_sidebar():
@@ -73,4 +111,14 @@ def body():
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(prog='price_fetch_frontend', usage='%(prog)s [options]')
+    parser.add_argument('--multi', action='store_true',
+                        help='Launches the Historical Price Data Downloader tab in multi '
+                             'page mode (does not start docs server)')
+
+    args = parser.parse_args()
+
+    start_pdocs(args.multi)
+
     do_main()
