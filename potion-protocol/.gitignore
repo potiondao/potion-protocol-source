@@ -1,8 +1,11 @@
 node_modules
 build
 npm-debug.log
-.env
 .DS_Store
 graph-node
 .eslintcache
 data
+.env
+.env.*
+!.env.dist
+!.env.*.dist

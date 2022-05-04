@@ -4,7 +4,6 @@ bin/matchstick
 tests/.bin
 generated
 npm-debug.log
-.env
 .DS_Store
 graph-node
 

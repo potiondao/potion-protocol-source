@@ -22,7 +22,7 @@ dataSources:
         - OrderBookEntry
       abis:
         - name: PotionLiquidityPool
-          file: node_modules/potion-contracts/abis/PotionLiquidityPool.json
+          file: ../potion-contracts/abis/PotionLiquidityPool.json
       eventHandlers:
         # Liquidity Pool Events
         - event: Deposited(indexed address,indexed uint256,uint256)
@@ -57,7 +57,7 @@ dataSources:
         - Curve
       abis:
         - name: CurveManager
-          file: node_modules/potion-contracts/abis/ICurveManager.json
+          file: ../potion-contracts/abis/ICurveManager.json
       eventHandlers:
         - event: CurveAdded(indexed bytes32,(int256,int256,int256,int256,int256))
           handler: handleCurveAdded
@@ -78,7 +78,7 @@ dataSources:
         - CriteriaJoinedCriteriaSet
       abis:
         - name: CriteriaManager
-          file: node_modules/potion-contracts/abis/ICriteriaManager.json
+          file: ../potion-contracts/abis/ICriteriaManager.json
       eventHandlers:
         - event: CriteriaAdded(indexed bytes32,(address,address,bool,uint256,uint256))
           handler: handleCriteriaAdded
@@ -99,9 +99,9 @@ dataSources:
         - OToken
       abis:
         - name: OtokenFactoryContract
-          file: node_modules/potion-contracts/abis/OtokenFactory.json
+          file: ../potion-contracts/abis/OtokenFactory.json
         - name: Otoken
-          file: node_modules/potion-contracts/abis/Otoken.json
+          file: ../potion-contracts/abis/Otoken.json
       eventHandlers:
         - event: OtokenCreated(address,address,indexed address,indexed address,indexed address,uint256,uint256,bool)
           handler: handleOtokenCreate
@@ -122,9 +122,9 @@ dataSources:
         - Collateral
       abis:
         - name: Whitelist
-          file: node_modules/potion-contracts/abis/Whitelist.json
+          file: ../potion-contracts/abis/Whitelist.json
         - name: IERC20MetadataUpgradeable
-          file: node_modules/potion-contracts/abis/IERC20MetadataUpgradeable.json
+          file: ../potion-contracts/abis/IERC20MetadataUpgradeable.json
       eventHandlers:
         - event: CollateralWhitelisted(indexed address)
           handler: handleCollateralWhitelist

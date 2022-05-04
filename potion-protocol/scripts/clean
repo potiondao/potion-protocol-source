@@ -2,8 +2,11 @@
 
 echo "Shutting down containers"
 
-docker kill $(docker ps -q)
-docker rm $(docker ps -a -q)
+docker-compose down
+#docker stop $(docker ps -q)
+#docker kill $(docker ps -q)
+#docker rm $(docker ps -a -q)
+#docker image rm $(docker image ls -a -q)
 
 yarn unlink:clean:contracts
 yarn unlink:subgraph
