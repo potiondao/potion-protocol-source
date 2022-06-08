@@ -383,7 +383,7 @@ def start_curve_gen_button_callback():
     if not is_port_in_use(8502):
         st.session_state.curve_gen_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/curvegen/curve_gen_frontend.py',
-            '--server.port', '8502', '--server.headless', 'true'])
+            '--server.port', '8502', '--server.headless', 'true', '--', '--multi'])
         st.session_state.curve_gen_engine_status = curve_gen_on_md
 
 
@@ -398,7 +398,7 @@ def start_backtester_button_callback():
     if not is_port_in_use(8503):
         st.session_state.backtester_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/backt/backtest_frontend.py', '--server.port',
-            '8503', '--server.headless', 'true'])
+            '8503', '--server.headless', 'true', '--', '--multi'])
         st.session_state.backtester_engine_status = backtester_on_md
 
 
@@ -413,7 +413,7 @@ def start_pool_creator_button_callback():
     if not is_port_in_use(8504):
         st.session_state.pool_creator_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/category/cat_frontend.py', '--server.port',
-            '8504', '--server.headless', 'true'])
+            '8504', '--server.headless', 'true', '--', '--multi'])
         st.session_state.pool_creator_engine_status = pool_creator_on_md
 
 
@@ -428,7 +428,7 @@ def start_pool_backtester_button_callback():
     if not is_port_in_use(8505):
         st.session_state.pool_backtester_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/multibackt/ma_frontend.py', '--server.port',
-            '8505', '--server.headless', 'true'])
+            '8505', '--server.headless', 'true', '--', '--multi'])
         st.session_state.pool_backtester_engine_status = pool_backtester_on_md
 
 
@@ -443,7 +443,7 @@ def start_log_management_button_callback():
     if not is_port_in_use(8506):
         st.session_state.log_management_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/log_management/log_management_frontend.py',
-            '--server.port', '8506', '--server.headless', 'true'])
+            '--server.port', '8506', '--server.headless', 'true', '--', '--multi'])
         st.session_state.log_management_engine_status = log_management_on_md
 
 
@@ -475,7 +475,7 @@ def start_price_fetch_button_callback():
     if not is_port_in_use(8507):
         st.session_state.price_fetch_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/price_fetch/price_fetch_frontend.py',
-            '--server.port', '8507', '--server.headless', 'true'])
+            '--server.port', '8507', '--server.headless', 'true', '--', '--multi'])
         st.session_state.price_fetch_engine_status = price_fetch_on_md
 
 
@@ -490,7 +490,7 @@ def start_curve_fetch_button_callback():
     if not is_port_in_use(8508):
         st.session_state.curve_fetch_engine = subprocess.Popen([
             'streamlit', 'run', './potion/streamlitapp/curve_fetch/curve_fetch_frontend.py',
-            '--server.port', '8508', '--server.headless', 'true'])
+            '--server.port', '8508', '--server.headless', 'true', '--', '--multi'])
         st.session_state.curve_fetch_engine_status = curve_fetch_on_md
 
 
