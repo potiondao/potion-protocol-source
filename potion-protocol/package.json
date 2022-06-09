@@ -8,9 +8,11 @@
     },
     "scripts": {
         "deploy:ganache": "yarn workspace potion-contracts deploy:ganache",
+        "deploy:kovan": "yarn workspace potion-contracts deploy:kovan",
         "deploy:subgraph:ganache": "cd potion-subgraph && yarn deploy:subgraph:ganache",
+        "deploy:subgraph:kovan": "cd potion-subgraph && yarn deploy:kovan",
         "postinstall": "cd potion-subgraph && yarn",
-        "prepare": "env-prompt -d .env.sample",
+        "prepare": "env-prompt -d .env.dist -l .env",
         "prepare:contracts": "yarn workspace potion-contracts prepare",
         "serve": "yarn workspace potion-dapp serve",
         "serve:ganache": "yarn workspace potion-dapp serve:ganache",
@@ -23,6 +25,6 @@
         "unlink:dapp": "yarn workspace potion-dapp unlink potion-contracts"
     },
     "devDependencies": {
-        "env-prompt": "^1.2.3"
+        "env-prompt": "^2.0.3"
     }
 }

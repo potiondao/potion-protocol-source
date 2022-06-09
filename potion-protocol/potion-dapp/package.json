@@ -14,8 +14,8 @@
     "build:kovan.independent": "vue-cli-service build --mode kovan.independent",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "prepare:env": "cp .env.ganache.example .env.ganache.local && cp .env.kovan.example .env.kovan.local && cp .env.kovan.independent.example .env.kovan.independent.local && cp .env.kovan.demo.example .env.kovan.demo.local",
-    "prepare:hooks": "npx lefthook install && npx lefthook run pre-commit",
+    "prepare:env": "cp .env.ganache.dist .env.ganache && cp .env.kovan.dist .env.kovan && cp .env.kovan.independent.dist .env.kovan.independent && cp .env.kovan.demo.dist .env.kovan.demo",
+    "prepare:hooks": "npx @arkweid/lefthook install && npx @arkweid/lefthook run pre-commit",
     "tailwind-config-viewer": "tailwind-config-viewer -o",
     "postinstall": "yarn prepare:hooks"
   },
@@ -47,7 +47,7 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.6",
+    "@arkweid/lefthook": "^0.7.7",
     "@babel/core": "^7.13.1",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.2",

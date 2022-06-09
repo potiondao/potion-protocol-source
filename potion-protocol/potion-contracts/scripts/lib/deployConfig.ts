@@ -107,11 +107,7 @@ export const config: NetworkConfigMap = {
   kovan: {
     collateralToken: '0x7e6edA50d1c833bE936492BF42C1BF376239E9e2',
     opynAddressBook: '0x8812f219f507e8cfe9d2f1e790164714c5e06a73',
-    postDeployActions: [
-      new AllocateCollateralTokensFromFaucet(EXTERNAL_COLLATERAL_ALLOCATIONS),
-      new AllocateCollateralTokensToWalletsFromFaucet(parseUsdcAmount('1000000'), false),
-    ],
-    whitelistedTokenAddresses: ['0x50570256f0da172a1908207aAf0c80d4b279f303'],
+    postDeployActions: [],
   },
   // The kovan.independent deployment deploys Opyn and Potion from the ground up, so that we control even the Opyn contracts
   'kovan.independent': {

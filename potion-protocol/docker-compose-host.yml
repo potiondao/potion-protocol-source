@@ -1,0 +1,38 @@
+version: "3"
+services:
+  graph-node:
+    image: graphprotocol/graph-node:v0.24.1
+    network_mode: "host"
+    depends_on:
+      - ipfs
+      - postgres
+      - ganache
+    environment:
+      postgres_host: localhost
+      postgres_user: graph-node
+      postgres_pass: let-me-in
+      postgres_db: graph-node
+      ipfs: "localhost:5001"
+      ethereum: "mainnet:http://localhost:8545"
+      RUST_LOG: info
+  ipfs:
+    image: ipfs/go-ipfs
+    network_mode: "host"
+    volumes:
+      - ./data/ipfs:/data/ipfs
+  postgres:
+    image: postgres
+    network_mode: "host"
+    command: ["postgres", "-cshared_preload_libraries=pg_stat_statements"]
+    environment:
+      POSTGRES_USER: graph-node
+      POSTGRES_PASSWORD: let-me-in
+      POSTGRES_DB: graph-node
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+  ganache:
+    image: trufflesuite/ganache-cli
+    network_mode: "host"
+    command: NODE_OPTIONS=-max_old_space_size=8192 ganache-cli -h 0.0.0.0 --gasLimit=0x1C9C380 --callGasLimit=0x1C9C380 -m "${GANACHE_MNEMONIC}"
+    volumes:
+      - ./data/ganache:/data/ganache

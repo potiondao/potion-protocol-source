@@ -8,8 +8,10 @@ yarn.lock
 
 
 # local env files
-.env.local
-.env.*.local
+.env
+.env.*
+!.env.dist
+!.env.*.dist
 
 # Log files
 npm-debug.log*
@@ -26,6 +28,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 build-storybook.log
-.env
 .fleek.json
-.env.kovan.demo

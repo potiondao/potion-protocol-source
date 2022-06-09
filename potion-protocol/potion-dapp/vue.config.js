@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "./",
   pluginOptions: {
     webpackBundleAnalyzer: {
       openAnalyzer: false,
@@ -30,6 +31,10 @@ module.exports = {
     ];
   },
   chainWebpack: (config) => {
+    config.plugin("html").tap((args) => {
+      args[0].title = "Potion Protocol";
+      return args;
+    });
     config.module.rule("ts").exclude.add(/\.worker\.ts$/i);
   },
 };

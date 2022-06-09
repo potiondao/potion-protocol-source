@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "About to deploy to kovan" &&
+yarn prepare:contracts &&
+yarn deploy:kovan &&
+echo "Deployed to kovan successfully" &&
+yarn deploy:subgraph:kovan

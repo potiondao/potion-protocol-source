@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "types": "./typechain/index.d.ts",
   "scripts": {
-    "prepare": "env-prompt -d .env.sample",
+    "prepare": "env-prompt -d .env.dist -l .env",
     "build": "yarn run clean && yarn run compile && yarn run typechain",
     "solhint": "solhint --max-warnings 0 'contracts/**/*.sol'",
     "lint": "eslint --max-warnings 0 . && solhint --max-warnings 0 'contracts/**/*.sol' && prettier --check .",
@@ -88,7 +88,7 @@
     "lint-staged": "^10.5.4",
     "mocha": "^8.3.2",
     "prettier": "2.2.1",
-    "prettier-plugin-solidity": "^1.0.0-beta.6",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
     "pretty-quick": "^3.1.0",
     "solc-0.8": "npm:solc@^0.8.0",
     "solhint": "^3.3.4",
@@ -130,6 +130,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts-upgradeable": "4.1.0",
-    "gamma-protocol": "https://github.com/opynfinance/GammaProtocol#14b009b0ad4f187b046f1c899123a180b003bb11"
+    "gamma-protocol": "https://github.com/opynfinance/GammaProtocol"
   }
 }

@@ -64,7 +64,7 @@ In order to deploy to the different Ethereum networks. We include some predefine
 
 Depending which network you want to deploy, we need to define some environment variables.
 
-We have included an .env.sample file that contains the required environment variables.
+We have included an .env.dist file that contains the required environment variables.
 
 For instance, if we want to deploy to `Kovan`, we require the following variables.
 
